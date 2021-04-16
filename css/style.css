@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: url("../images/bg.jpg") no-repeat center;
+	background-size: cover;
+	min-height: 100vh;
+	font-family: cursive;
+}
+* {
+	box-sizing: border-box;
+}
+
+.page {
+	background: rgb(0 0 0 / 26%);
+	min-height: 100vh;
+}
+.page form {
+	color: #fff;
+}
+.page form button {
+	width: 300px;
+}
+.page .box {
+	min-height: 200px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.page .box .head {
+	background-color: rgb(53, 85, 226);
+	color: aliceblue;
+	padding: 5px;
+	text-align: center;
+}
+.page .box .content {
+	padding: 20px;
+	max-height: 300px;
+	overflow: auto;
+}
+.page .box .content ul {
+	list-style: none;
+	padding: 0;
+	max-height: 300px;
+	min-height: 100px;
+}
+.page .box .content ul li {
+	border-bottom: 1px solid #d4d4d4;
+	padding: 0.2rem 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	transition: background-color 0.2s ease-in-out;
+}
+.page .box .content ul li:hover {
+	background-color: rgba(219, 219, 219, 0.356);
+}
+.page .box .content ul li .actions span {
+	cursor: pointer;
+	color: rgb(245, 70, 26);
+}

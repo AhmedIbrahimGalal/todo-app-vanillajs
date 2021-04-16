@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todo App</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section class="page">
+			<div class="container">
+				<form class="row pt-5 pb-5">
+					<div class="form-group col-sm-6">
+						<label for="taskName">Task Name</label>
+						<input type="text" class="form-control" id="taskName" />
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="taskType">Task Type</label>
+						<select class="form-control" name="taskType" id="taskType">
+							<option value="todo">To Do</option>
+							<option value="doing">Doing</option>
+							<option value="done">Done</option>
+						</select>
+					</div>
+					<div class="col-12 d-flex justify-content-center">
+						<button
+							type="submit"
+							class="btn btn-primary"
+							onclick="addTask(event)"
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+
+				<div class="row pt-5 pb-5">
+					<div class="col-sm-6 col-md-4 mb-3">
+						<div class="todo box">
+							<div class="head">
+								<h4>TO DO</h4>
+							</div>
+							<div class="content">
+								<ul
+									id="todoElements"
+									ondrop="drop(event, this, 'todoTasks')"
+									ondragover="allowDrop(event)"
+								></ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4 mb-3">
+						<div class="doing box">
+							<div class="head">
+								<h4>Doing</h4>
+							</div>
+							<div class="content">
+								<ul
+									id="doingElements"
+									ondrop="drop(event, this, 'doingTasks')"
+									ondragover="allowDrop(event)"
+								></ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-md-4 mb-3">
+						<div class="done box">
+							<div class="head">
+								<h4>Done</h4>
+							</div>
+							<div class="content">
+								<ul
+									id="doneElements"
+									ondrop="drop(event, this, 'doneTasks')"
+									ondragover="allowDrop(event)"
+								></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script
+			src="https://kit.fontawesome.com/5e76e94ca7.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>
